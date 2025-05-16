@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&family=Marck+Script&family=Montserrat&family=Orbitron&family=Oswald:wght@700&family=PT+Sans+Narrow&family=Roboto&family=Satisfy&family=Tektur&display=swap');
+/* Bases */
 
 *{
     margin: 0;
@@ -7,8 +8,35 @@
 
 header{
     width: 100%;
-    height: 7rem;
-    background-color: red;
+    height: 6.5rem;
+    background-color: #4b8fbd;
+}
+
+.menuI{
+    font-family: 'Roboto';
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: rgb(199, 198, 198);
+
+    text-align: center;
+
+    margin: auto 1rem;
+    margin-top: 2.5rem;
+    transition: all 0.2s ease;
+}
+
+.menuI:hover{
+    color: white;
+    transform: translateY(-0.2rem);
+}
+
+.centralizar{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider.base {
