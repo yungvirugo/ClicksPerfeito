@@ -18,3 +18,10 @@ function showSlides() {
 
     setTimeout(showSlides, 4000); // Altere aqui para ajustar o tempo de troca de imagem (6 segundos).
 }
+
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
