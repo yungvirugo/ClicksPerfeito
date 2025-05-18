@@ -51,6 +51,8 @@ h2 {
     font-family: 'Roboto Condensed';
     text-align: center;
     font-size: 1.7rem;
+
+    padding: 3rem;
 }
 
 .action-btn{
@@ -83,6 +85,25 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.principal-photo{
+    width: 37%;
+    height: 30rem;
+
+    margin-right: 3rem;
+
+    background-color: blue;
+}
+
+.text-apresent{
+    width: 30%;
+    height: 30rem;
+
+    display: flex;
+    align-items: center;
+
+    background-color: red;
 }
 
 .slider.base {
@@ -130,6 +151,65 @@ img {
     75% {
         opacity: 1;
     }
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+th {
+  width: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f3f3f3;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  table, thead, tbody, tr, th, td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: transparent;
+    text-align: left;
+    font-size: 1.3rem;
+    padding-bottom: 0;
+  }
+
+  td {
+    padding-top: 0;
+  }
 }
 
 /* Estilo principal para a página Sobre Nós */
@@ -234,6 +314,17 @@ img {
     color: #666;
     font-size: 0.95rem;
     margin-top: 8px;
+}
+
+.galeria{
+    width: 40%;
+    height: 30rem;
+
+    margin: auto;
+}
+
+.galeria img{
+    height: 100%;
 }
 
 /* Estilos gerais da galeria */
