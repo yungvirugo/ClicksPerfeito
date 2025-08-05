@@ -8,6 +8,10 @@
     color: white;
 }
 
+body {
+    background-color: #f8f8ff;
+}
+
 header {
     width: 100%;
     height: 6rem;
@@ -46,7 +50,7 @@ nav {
 .links-menu a {
     width: auto;
     height: 2.5rem;
-    
+
     margin-left: 2rem;
     font-size: 1.4rem;
     font-weight: 600;
@@ -82,13 +86,13 @@ nav {
     background-color: rgb(195, 0, 255);
 }
 
-h1{
+h1 {
     font-weight: 600
 }
 
 h1,
 h2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
     color: #5829AB;
 }
@@ -126,7 +130,141 @@ h2 {
     background-color: #5829AB;
 }
 
-.container{
+.container {
     width: 75%;
-    height: 40rem;
+    height: auto;
+
+    margin: auto;
+
+    margin-top: 4rem;
+}
+
+.alt-center {
+    width: 90%;
+    height: auto;
+
+    margin: auto;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+    display: flex;
+
+}
+
+.alt-center p {
+    width: 40rem;
+
+    color: #5829AB;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    padding: 0.5rem;
+
+    box-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.568);
+    border-radius: 0.5rem;
+    border: 0.2rem solid #5929abb7;
+}
+
+.alt-center img {
+    width: 32rem;
+    height: 27rem;
+}
+
+.servico {
+    width: 60%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto;
+    margin-top: 3rem;
+
+    box-shadow: 0.3rem 0.4rem 0.8rem rgba(0, 0, 0, 0.568);
+    border-radius: 0.5rem;
+    border: 0.2rem solid #5929abb7;
+
+    background-color: white;
+}
+
+.servico h1{
+    text-align: left;
+}
+
+.contents-service {
+    width: 49%;
+    height: auto;
+
+    align-items: center;
+
+    padding: 2rem;
+
+    color: black;
+
+}
+
+.contents-service .item {
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+}
+
+.contents-service strong {
+    display: block;
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.contents-service p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    color: #008000;
+}
+
+.contents-service span {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+strong {
+    color: red;
+}
+
+.Btn-action-retro {
+    width: 12rem;
+    height: 4.5rem;
+    color: white;
+
+    border: 0.2rem solid #5829AB;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    background-color: #5829AB;
+}
+
+.Btn-action-retro:hover {
+        color: #5829AB;
+    transform: translateY(-0.5rem);
+
+        background-color: transparent;
+
+}
+
+.centralizar{
+    width: 100%;
+    height: 12rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
