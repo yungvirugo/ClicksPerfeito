@@ -112,14 +112,14 @@
             const data = document.getElementById("data").value;
             const hora = document.getElementById("hora").value;
 
-            const mensagem = `Olá! Me chamo *${nome}* e gostaria de agendar um atendimento com a ClicksPerfeito. 
-      
-            🗓 *Serviço:* ${servico}
-            📅 *Data:* ${data}
-            🕒 *Horário:* ${hora}
-            📱 *Meu WhatsApp:* ${clienteWhats}`;
+            const mensagem = `Olá! Me chamo ${nome} e gostaria de agendar um atendimento com a ClicksPerfeito.
 
-            const numeroClicks = "16994297338"; // Exemplo: 5511999999999 (com DDD e sem +)
+            Serviço: ${servico}
+            Data: ${data}
+            Horário: ${hora}
+            Meu WhatsApp: ${clienteWhats}`;
+
+            const numeroClicks = "5516994297338"; // CORRETO: com DDI 55
             const url = `https://wa.me/${numeroClicks}?text=${encodeURIComponent(mensagem)}`;
 
             window.open(url, "_blank");
