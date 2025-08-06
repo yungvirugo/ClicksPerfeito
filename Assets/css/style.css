@@ -323,6 +323,70 @@ strong {
     background-color: #5929ab88;
 }
 
+
+
+
+.agendamento {
+    background: #f7f7f7;
+    padding: 40px 20px;
+}
+
+.container-agendamento {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-agendamento h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container-agendamento p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.container-agendamento form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    color: black;
+}
+
+.container-agendamento form input,
+.container-agendamento form select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+
+    color: black;
+}
+
+.container-agendamento button {
+    background: #222;
+    color: black;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container-agendamento button:hover {
+    background: #000;
+}
+
+
 html {
     scroll-behavior: smooth;
 }

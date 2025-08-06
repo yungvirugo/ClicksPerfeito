@@ -39,41 +39,36 @@
     </header>
 
 
-    <div class="centralizar">
-        <form action="https://formsubmit.co/victor.cestaros@gmail.com" method="POST" class="form-orcamento">
-            <h2>Solicite seu Orçamento 📷</h2>
+    <section class="agendamento">
+        <div class="container-agendamento">
+            <h1>Agende Seu Atendimento</h1>
+            <p>Escolha a melhor data e horário para seu ensaio ou retirada de fotos.</p>
 
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="Novo orçamento solicitado!" />
-            <input type="hidden" name="_template" value="box" />
-            <input type="hidden" name="_autoresponse"
-                value="Recebemos seu orçamento! Em breve entraremos em contato." />
+            <form id="form-agendamento">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
 
-            <label for="input-nome" class="form-label">Nome completo</label>
-            <input type="text" id="input-nome" name="nome" class="form-input" required />
+                <label for="whatsapp">Seu WhatsApp:</label>
+                <input type="tel" id="whatsapp" required placeholder="(xx) xxxxx-xxxx">
 
-            <label for="input-email" class="form-label">E-mail</label>
-            <input type="email" id="input-email" name="email" class="form-input" required />
+                <label for="servico">Tipo de atendimento:</label>
+                <select id="servico" required>
+                    <option value="">Selecione</option>
+                    <option value="Ensaio fotográfico">Ensaio fotográfico</option>
+                    <option value="Revelação de fotos">Revelação de fotos</option>
+                    <option value="Retirada de material">Retirada de material</option>
+                </select>
 
-            <label for="select-tipo" class="form-label">Tipo de sessão</label>
-            <select id="select-tipo" name="tipo" class="form-select" required>
-                <option value="">Selecione</option>
-                <option value="ensaio">Ensaio fotográfico</option>
-                <option value="evento">Cobertura de evento</option>
-                <option value="casamento">Casamento</option>
-                <option value="outro">Outro</option>
-            </select>
+                <label for="data">Data desejada:</label>
+                <input type="date" id="data" required>
 
-            <label for="input-data" class="form-label">Data desejada</label>
-            <input type="date" id="input-data" name="data" class="form-input" />
+                <label for="hora">Horário desejado:</label>
+                <input type="time" id="hora" required>
 
-            <label for="textarea-mensagem" class="form-label">Mensagem ou detalhes adicionais</label>
-            <textarea id="textarea-mensagem" name="mensagem" rows="4" class="form-textarea"
-                placeholder="Conte mais sobre o que você precisa..."></textarea>
-
-            <button type="submit" id="botao-enviar" class="form-button">Enviar</button>
-        </form>
-    </div>
+                <button type="submit">Agendar via WhatsApp</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
@@ -107,7 +102,29 @@
         </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <script>
+        document.getElementById("form-agendamento").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const clienteWhats = document.getElementById("whatsapp").value;
+            const servico = document.getElementById("servico").value;
+            const data = document.getElementById("data").value;
+            const hora = document.getElementById("hora").value;
+
+            const mensagem = `Olá! Me chamo *${nome}* e gostaria de agendar um atendimento com a ClicksPerfeito. 
+      
+            🗓 *Serviço:* ${servico}
+            📅 *Data:* ${data}
+            🕒 *Horário:* ${hora}
+            📱 *Meu WhatsApp:* ${clienteWhats}`;
+
+            const numeroClicks = "5516994297338I"; // Exemplo: 5511999999999 (com DDD e sem +)
+            const url = `https://wa.me/${numeroClicks}?text=${encodeURIComponent(mensagem)}`;
+
+            window.open(url, "_blank");
+        });
+    </script>
 </body>
 
 </html>
