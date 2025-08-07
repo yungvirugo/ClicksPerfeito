@@ -20,10 +20,26 @@
                 <a href="index.html">Home</a>
                 <a href="portifólio.html">Portifólio</a>
                 <a href="agendamento.html">Agendar</a>
-                <a href="#servico">Serviços</a>
                 <a href="">Contato</a>
             </div>
         </nav>
+    </header>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">Clicks Perfeitos</div>
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+        <nav class="mobile-menu" id="mobile-menu">
+            <div class="log">
+                <div class="close-btn" id="close-menu">✕</div>
+            </div>
+            <a href="/index.html">Home</a>
+            <a href="/portifólio.html">Portifólio</a>
+            <a href="/agendamento.html">Agendamento</a>
+            <a href="/sobre.html">Contato</a>
+        </nav>
+        <div class="overlay" id="overlay"></div>
     </header>
 
     <section class="agendamento">
@@ -111,6 +127,27 @@
 
             window.open(url, "_blank");
         });
+
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenu = document.getElementById("close-menu");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden"; // trava scroll
+        });
+
+        closeMenu.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu);
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
     </script>
 </body>
 

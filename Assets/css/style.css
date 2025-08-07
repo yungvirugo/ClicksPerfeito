@@ -6,10 +6,20 @@
     font-family: 'League Spartan';
     font-weight: 400;
     color: white;
+    box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: #f8f8ff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* impede scroll horizontal */
+}
+
+body.menu-open {
+    overflow-y: hidden;
+    /* trava o scroll quando menu está aberto */
 }
 
 header {
@@ -391,21 +401,131 @@ html {
     scroll-behavior: smooth;
 }
 
+.mobile-header {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    /* impede clique quando escondido */
+    transition: opacity 0.3s ease;
+    z-index: 150;
+}
+
 /* Responsividade geral */
 @media (max-width: 1080px) {
-    header{
+    header {
         display: none;
     }
 
-    h1, h2{
+    .overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    h1,
+    h2 {
         width: auto;
     }
 
-    .container{
+    /* Cabeçalho mobile */
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5929ab;
+        color: white;
+        padding: 1rem;
+        position: relative;
+        z-index: 100;
+
         width: 100%;
     }
 
-    .carrosel{
+    .mobile-logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* Menu lateral */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -13rem;
+        /* escondido */
+        width: 13rem;
+        height: 44rem;
+        background-color: white;
+        display: block;
+        transition: right 0.3s ease-in-out;
+        z-index: 200;
+    }
+
+    .log {
+        width: 100%;
+        height: 6rem;
+
+        top: 0;
+
+        background-color: #5829AB;
+    }
+
+    /* Botão de fechar */
+    .close-btn {
+        font-size: 1.8rem;
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 0.4rem 1rem;
+        /* diminui espaço interno */
+        margin: 1.5rem 0;
+        /* diminui espaço externo */
+        font-size: 1.4rem;
+        /* deixa o texto proporcional */
+        line-height: 1.2;
+        /* altura da linha menor */
+        color: black;
+        text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Estado ativo */
+    .mobile-menu.active {
+        right: 0;
+    }
+
+
+
+    .container {
+        width: 100%;
+    }
+
+    .carrosel {
         width: 90%;
         height: 14rem;
 
@@ -413,46 +533,46 @@ html {
         margin-top: 4rem;
     }
 
-    .actionBtn{
+    .actionBtn {
         width: 100%;
         display: flex;
 
         justify-content: flex-start;
     }
 
-    .Btn-action{
+    .Btn-action {
         width: 11rem;
         margin-left: 0.3rem;
     }
 
-    .alt-center{
+    .alt-center {
         display: block;
         padding: 0;
         justify-content: flex-start;
     }
 
-    .alt-center p{
+    .alt-center p {
         width: 20rem;
         margin: 0;
 
         padding: 0;
     }
 
-    .alt-center img{
+    .alt-center img {
         width: 20rem;
     }
 
-    .servico{
+    .servico {
         width: 90%;
         justify-content: flex-start;
     }
 
-    .contents-service{
+    .contents-service {
         width: 12rem;
         justify-content: flex-start;
     }
 
-    .centralizar{
+    .centralizar {
         width: 12rem;
     }
 }
