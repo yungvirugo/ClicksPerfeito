@@ -542,39 +542,44 @@ html {
 
     .Btn-action {
         width: 11rem;
-        margin-left: 0.3rem;
+        margin-left: 0.6rem;
     }
 
     .alt-center {
         display: block;
         padding: 0;
         justify-content: flex-start;
+
+        width: 100%;
     }
 
     .alt-center p {
-        width: 20rem;
+        width: 100%;
         margin: 0;
+        margin-top: 1rem;
 
-        padding: 0;
+        padding: 1rem;
     }
 
     .alt-center img {
-        width: 20rem;
+        width: 100%;
     }
 
     .servico {
-        width: 90%;
+        width: 100%;
         justify-content: flex-start;
     }
 
     .contents-service {
-        width: 12rem;
+        width: 15rem;
         justify-content: flex-start;
     }
 
     .centralizar {
-        width: 12rem;
+        width: 100%;
     }
+
+
 }
 
 /* Responsividade para a página de agendamento */
