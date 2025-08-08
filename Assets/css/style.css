@@ -381,7 +381,7 @@ strong {
 }
 
 .container-agendamento button {
-    background: #222;
+    background: #5829AB;
     color: black;
     padding: 12px;
     border: none;
@@ -422,6 +422,88 @@ html {
     transition: opacity 0.3s ease;
     z-index: 150;
 }
+
+.contato {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container-contato {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-contato h1 {
+    margin-bottom: 0.5rem;
+    color: #5929ab;
+}
+
+.container-contato p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 0.5rem 0 0.3rem;
+}
+
+input,
+textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border: none;
+    background: #5929ab;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #7a45d1;
+}
+
+.info-contato {
+    max-width: 300px;
+}
+
+.info-contato h3 {
+    margin-bottom: 1rem;
+    color: #5929ab;
+}
+
+@media (max-width: 768px) {
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-contato,
+    .info-contato {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
 
 /* Responsividade geral */
 @media (max-width: 1080px) {
@@ -470,7 +552,7 @@ html {
         right: -13rem;
         /* escondido */
         width: 13rem;
-        height: 44rem;
+        height: 65rem;
         background-color: white;
         display: block;
         transition: right 0.3s ease-in-out;
@@ -491,23 +573,32 @@ html {
         font-size: 1.8rem;
         color: white;
         position: absolute;
-        top: 15px;
-        right: 15px;
+
+        top: 1.5rem;
+        right: 1.5rem;
         cursor: pointer;
     }
 
     .mobile-menu a {
         display: block;
         padding: 0.4rem 1rem;
-        /* diminui espaço interno */
-        margin: 1.5rem 0;
-        /* diminui espaço externo */
+        margin: 2rem 0;
+
         font-size: 1.4rem;
-        /* deixa o texto proporcional */
         line-height: 1.2;
-        /* altura da linha menor */
         color: black;
         text-decoration: none;
+    }
+
+    .mobile-menu p {
+        color: black;
+
+        width: 70%;
+        text-align: center;
+        font-size: 0.9rem;
+
+        margin: auto;
+        margin-top: 18rem;
     }
 
     .mobile-menu a:hover {
@@ -550,7 +641,7 @@ html {
         padding: 0;
         justify-content: flex-start;
 
-        width: 100%;
+        width: 95%;
     }
 
     .alt-center p {
@@ -566,7 +657,7 @@ html {
     }
 
     .servico {
-        width: 100%;
+        width: 95%;
         justify-content: flex-start;
     }
 
