@@ -90,11 +90,62 @@ nav {
     height: 30rem;
 
     margin: auto;
+    position: relative;
+    overflow: hidden;
 
     border-radius: 0 0 0.7rem 0.7rem;
 
     background-color: rgb(195, 0, 255);
 }
+
+
+
+.carousel-track {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover; /* preenche a div sem distorcer */
+    object-position: center; /* mantém o foco central */
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 
 h1 {
     font-weight: 600
@@ -457,6 +508,7 @@ form {
 label {
     font-weight: bold;
     margin: 0.5rem 0 0.3rem;
+    color: #000;
 }
 
 input,
@@ -464,6 +516,7 @@ textarea {
     padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    resize: none;
 }
 
 button {
@@ -489,6 +542,10 @@ button:hover {
 .info-contato h3 {
     margin-bottom: 1rem;
     color: #5929ab;
+}
+
+.info-contato p{
+    color: #000;
 }
 
 @media (max-width: 768px) {
@@ -519,6 +576,10 @@ button:hover {
     h1,
     h2 {
         width: auto;
+    }
+
+    .carousel-slide img{
+        height: 60%;
     }
 
     /* Cabeçalho mobile */
