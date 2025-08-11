@@ -116,8 +116,10 @@ nav {
     height: 100%;
     display: block;
 
-    object-fit: cover; /* preenche a div sem distorcer */
-    object-position: center; /* mantém o foco central */
+    object-fit: cover;
+    /* preenche a div sem distorcer */
+    object-position: center;
+    /* mantém o foco central */
     display: block;
 }
 
@@ -347,6 +349,7 @@ strong {
 
     overflow: hidden;
 
+
     background-color: #008000;
 }
 
@@ -355,6 +358,11 @@ strong {
     height: 100%;
 
     cursor: pointer;
+    display: block;
+    object-fit: cover;
+    /* preenche a div sem distorcer */
+    object-position: center;
+    /* mantém o foco central */
     display: block;
 
     transition: all 0.2s ease;
@@ -544,8 +552,24 @@ button:hover {
     color: #5929ab;
 }
 
-.info-contato p{
+.info-contato p {
     color: #000;
+}
+
+#um {
+    /**/
+}
+
+#dois {
+    display: none;
+}
+
+#tres {
+    display: none;
+}
+
+#quatro {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -578,7 +602,7 @@ button:hover {
         width: auto;
     }
 
-    .carousel-slide img{
+    .carousel-slide img {
         height: 60%;
     }
 
