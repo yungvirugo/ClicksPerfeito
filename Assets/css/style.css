@@ -557,7 +557,7 @@ button:hover {
 }
 
 #um {
-    /**/
+    cursor: crosshair;
 }
 
 #dois {
